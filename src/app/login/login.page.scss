@@ -19,13 +19,14 @@
   padding-top: 5px;
 }
 
-.login {
-  padding-top: 20%;
-}
-
 .conten-center {
   display: block;
   text-align: center;
+}
+
+.conten-end {
+  display: block;
+  text-align: end;
 }
 
 .logo-img {
@@ -57,6 +58,12 @@
   }
 }
 
-.list-item {
-  margin-top: 10px;
+.p-title {
+  margin-bottom: 0px;
+  margin-top: 8px;
+}
+
+.font-color {
+  font-size: 18px;
+  color: orange;
 }
