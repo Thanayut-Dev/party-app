@@ -1,9 +1,65 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-buttons mode="ios" slot="start">
+      <ion-button>
+        <ion-icon mode="ios" slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>ลงทะเบียน</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="registerForm">
+    <ion-row size="12">
 
+      <ion-col size="4">
+        <ion-list class="line-input">
+          <ion-item>
+            <ion-input placeholder="คำนำหน้า"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="4">
+        <ion-list class="line-input">
+          <ion-item>
+            <ion-input placeholder="ชื่อ"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="4">
+        <ion-list class="line-input">
+          <ion-item>
+            <ion-input placeholder="นามสกุล"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <!-- <ion-col size="4">
+        111111111
+      </ion-col>
+      <ion-col size="4">
+        2222222
+      </ion-col>
+      <ion-col size="4">
+        3333333
+      </ion-col> -->
+    </ion-row>
+    <ion-row size="12">
+      44444444444444
+    </ion-row>
+    <ion-row size="12">
+      55555555555555
+    </ion-row>
+    <ion-row size="12">
+      <ion-text class="detail">ในการสมัครใช้งาน เราถือว่าคุณยอมรับข้อตกลง</ion-text>
+      <ion-text class="detail">ในการใช้งานและนโยบายความเป็นส่วนตัวกับทาง Mari-Rerm</ion-text>
+      <ion-text class="detail">ข้อตกลงในการให้บริการ</ion-text>
+    </ion-row>
+
+    <ion-row class="login">
+      <ion-col size="12" size-md>
+        <ion-button expand="block">ลงทะเบียน</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>
