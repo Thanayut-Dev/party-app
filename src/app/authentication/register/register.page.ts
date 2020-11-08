@@ -31,7 +31,7 @@ export class RegisterPage implements OnInit {
 
   register(): void {
     const data = this.registerForm.getRawValue();
-    console.log(data);
+    // console.log(data);
     this.authService.register(data)
       .then((result) => {
         this.router.navigate(['']);

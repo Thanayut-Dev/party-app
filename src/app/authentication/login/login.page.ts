@@ -27,7 +27,7 @@ export class LoginPage implements OnInit {
 
   login(): void {
     const data = this.loginForm.getRawValue();
-    console.log(data);
+    // console.log(data);
     this.authService.login(data)
         .then((result) => {
             this.router.navigate(['']);
