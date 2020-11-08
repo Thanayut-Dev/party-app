@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="LoginForm">
+  <form [formGroup]="loginForm">
     <ion-row class="conten-top">
       <ion-col size="12" size-md>
         <img class="logo-img "
@@ -20,14 +20,14 @@
       <ion-col size="12">
         <ion-list class="line-input">
           <ion-item lines="none">
-            <ion-input placeholder="อีเมล/โทรศัพท์"></ion-input>
+            <ion-input placeholder="อีเมล/โทรศัพท์" formControlName="email"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
       <ion-col size="12">
         <ion-list class="line-input">
           <ion-item lines="none">
-            <ion-input required type="password" placeholder="กรุณากรอกรหัสผ่าน"></ion-input>
+            <ion-input required type="password" placeholder="กรุณากรอกรหัสผ่าน" formControlName="password"></ion-input>
             <ion-icon name="eye"></ion-icon>
           </ion-item>
         </ion-list>
@@ -47,8 +47,9 @@
 
     <ion-row class="conten-top">
       <ion-col size="12" size-md>
-        <ion-button expand="block">เข้าสู่ระบบ</ion-button>
+        <ion-button expand="block" (click)="login()">เข้าสู่ระบบ</ion-button>
       </ion-col>
     </ion-row>
+    {{loginForm.value | json}}
   </form>
 </ion-content>

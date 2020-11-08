@@ -17,7 +17,7 @@
 
         <ion-item>
           <ion-label position="floating">คำนำหน้า</ion-label>
-          <ion-input></ion-input>
+          <ion-input formControlName="prefix"></ion-input>
         </ion-item>
 
       </ion-col>
@@ -25,7 +25,7 @@
 
         <ion-item>
           <ion-label position="floating">ชื่อ</ion-label>
-          <ion-input></ion-input>
+          <ion-input formControlName="firstname"></ion-input>
         </ion-item>
 
       </ion-col>
@@ -33,7 +33,7 @@
 
         <ion-item>
           <ion-label position="floating">นามสกุล</ion-label>
-          <ion-input></ion-input>
+          <ion-input formControlName="lastname"></ion-input>
         </ion-item>
 
       </ion-col>
@@ -43,7 +43,7 @@
 
         <ion-item>
           <ion-label position="floating">เบอร์โทร</ion-label>
-          <ion-input></ion-input>
+          <ion-input formControlName="phonenumber"></ion-input>
         </ion-item>
 
       </ion-col>
@@ -53,7 +53,17 @@
 
         <ion-item>
           <ion-label position="floating">อีเมล</ion-label>
-          <ion-input></ion-input>
+          <ion-input formControlName="email"></ion-input>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input required type="password" formControlName="password"></ion-input>
         </ion-item>
 
       </ion-col>
@@ -72,8 +82,10 @@
 
     <ion-row class="conten-top">
       <ion-col size="12" size-md>
-        <ion-button expand="block">ลงทะเบียน</ion-button>
+        <ion-button expand="block" (click)="register()">ลงทะเบียน</ion-button>
       </ion-col>
     </ion-row>
+
+    {{registerForm.value | json}}
   </form>
 </ion-content>

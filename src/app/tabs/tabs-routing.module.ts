@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { AuthenGuardService } from '../authentication/authen-guard.service';
 
 const routes: Routes = [
   {
@@ -13,19 +14,43 @@ const routes: Routes = [
       },
       {
         path: 'news',
-        loadChildren: () => import('../news/news.module').then(m => m.NewsPageModule)
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../news/news.module').then(m => m.NewsPageModule),
+            canActivate: [AuthenGuardService]
+          }
+        ]
       },
       {
         path: 'activities',
-        loadChildren: () => import('../activities/activities.module').then(m => m.ActivitiesPageModule)
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../activities/activities.module').then(m => m.ActivitiesPageModule),
+            canActivate: [AuthenGuardService]
+          }
+        ]
       },
       {
         path: 'member',
-        loadChildren: () => import('../member/member.module').then(m => m.MemberPageModule)
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../member/member.module').then(m => m.MemberPageModule),
+            canActivate: [AuthenGuardService]
+          }
+        ]
       },
       {
         path: 'me',
-        loadChildren: () => import('../me/me.module').then(m => m.MePageModule)
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../me/me.module').then(m => m.MePageModule),
+            canActivate: [AuthenGuardService]
+          }
+        ]
       },
       {
         path: '',

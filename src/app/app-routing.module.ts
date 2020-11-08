@@ -7,32 +7,36 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule)
+  },
+  {
     path: 'me',
-    loadChildren: () => import('./me/me.module').then( m => m.MePageModule)
+    loadChildren: () => import('./me/me.module').then(m => m.MePageModule)
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'member',
-    loadChildren: () => import('./member/member.module').then( m => m.MemberPageModule)
+    loadChildren: () => import('./member/member.module').then(m => m.MemberPageModule)
   },
   {
     path: 'news',
-    loadChildren: () => import('./news/news.module').then( m => m.NewsPageModule)
+    loadChildren: () => import('./news/news.module').then(m => m.NewsPageModule)
   },
   {
     path: 'activities',
-    loadChildren: () => import('./activities/activities.module').then( m => m.ActivitiesPageModule)
-  },
-  {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./activities/activities.module').then(m => m.ActivitiesPageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./authentication/login/login.module').then(m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./authentication/register/register.module').then(m => m.RegisterPageModule)
   }
 ];
 @NgModule({
@@ -41,4 +45,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
